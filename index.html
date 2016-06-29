@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Buenas practicas de desarrollo</title>
+    <meta name="description" content="">
+    <meta name="author" content="Diego Kuperman">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+	<section>
+	  <h2>Buenas practicas en desarrollo</h2>
+	  <br><br>
+	  <h4>Diego Kuperman | @freekey</h4>
+	</section>
+	<section>
+	  <h2>Buenas practicas en el desarrollo de proyectos para internet</h2>
+	  <br><br>
+	  <h4>Diego Kuperman | @freekey</h4>
+	</section>
+	<section>
+	  <h2>Buenas practicas en el ciclo de desarrollo de proyectos para internet</h2>
+	  <br><br>
+	  <h4>Diego Kuperman | @freekey</h4>
+	</section>
+
+	<section>
+	  <h1>Hola!</h1>
+	</section>
+	<section>
+	  <h1>Buenos dias :)</h1>
+	</section>
+
+	<section>
+	  <h1>&lt;Me&gt;</h1>
+	</section>
+	<section>
+	  <h1>Pegado a los ordenadores hace 33 años</h1>
+	</section>
+	<section>
+	  <h1>Logo</h1>
+	</section>
+	<section>
+	  <h1>Basic de comodore 64</h1>
+	</section>
+	<section>
+	  <h1>BBS's / Fidonet</h1>
+	  <h3>Mensajeria global</h3>
+	</section>
+	<section>
+	  <h1>ISP (muy cutre)</h1>
+	  <h3>FreeBSD / Unix philosofy / Networking</h3>
+	</section>
+	<section>
+	  <h1>Terra Networks / Telefónica</h1>
+	  <h3>Web performance / Perl / MySQL / ... </h3>
+	</section>
+	<section>
+	  <h1>Freekeylabs</h1>
+	  <h3>MVC, Proyectos, OSS Contributor</h3>
+	</section>
+	<section>
+	  <h1>CPAN Author</h1>
+	  <h3>...</h3>
+	</section>
+	<section>
+	  <h1>Open source contrubutor</h1>
+	  <h3>Perl / Javascript / ...</h3>
+	</section>
+	<section>
+	  <h1>Kedines</h1>
+	  <h1>Co-founder / Tech lead</h1>
+	</section>
+	<section>
+	  <h1>Freelance</h1>
+	  <h3>Sistemas / Desarrollo</h3>
+	  <h3>Performance / Rescate web / Formación</h3>
+	</section>
+	<section>
+	  <h1>Soysuper.com</h1>
+	  <h1>Co-Founder / CTO / Tech lead</h1>
+	</section>
+	<section>
+	  <h1>&lt;/Me&gt;</h1>
+	</section>
+
+	<section>
+	  <h1>Ideas guía</h1>
+	</section>
+	<section>
+	  <h1>Hacer lo que hace el software libre</h1>
+	</section>
+	<section>
+	  <h1>Hacer lo que hace Unix</h1>
+	</section>
+	<section>
+	  <h1>Crear es mas facil que cambiar</h1>
+	</section>
+	<section>
+	  <h1>Elegir y cuidar las herramientas</h1>
+	</section>
+	<section>
+	  <h1>Deciciones informadas (métricas)</h1>
+	</section>
+	<section>
+	  <h1>Automatizar todo!</h1>
+	</section>
+
+	<section>
+	  <h1>Temas para hoy...</h1>
+	</section>
+	<section>
+	  <h1>Arquitectura</h1>
+	  <h2>para facilitar los cambios</h2>
+	</section>
+	<section>
+	  <h1>Automatización</h1>
+	</section>
+	<section>
+	  <h1>Metodologías</h1>
+	  <h2>para facilitar la colaboración</h2>
+	</section>
+	<section>
+	  <h1>Deuda técnica</h1>
+	  <h2>y refactoring</h2>
+	</section>
+
+	<section>
+	  <h1>Arquitectura</h1>
+	</section>
+	<section>
+	  <h1>Software architecture</h1>
+	  <blockquote>
+	    Software architecture refers to the high level structures of a software system,
+	    the discipline of creating such structures, and the documentation of these structures.
+	    These structures are needed to reason about the software system.
+	  </blockquote>
+	  <br><br>
+	  <a>https://en.wikipedia.org/wiki/Software_architecture</a>
+	</section>
+
+	<section>
+	  <h1>Web básica</h1>
+	  <ul>
+	    <li>1 web server</li>
+	  </ul>
+	</section>
+	<section>
+	  <h1>Web simple</h1>
+	  <ul>
+	    <li>1 web server / proxy</li>
+	    <li>n web apps</li>
+	    <li>1 base de datos / storage</li>
+	  </ul>
+	</section>
+	<section>
+	  <h1>Web simple con tráfico</h1>
+	  <ul>
+	    <li>1 web server / proxy / cache</li>
+	    <li>n web apps</li>
+	    <li>1 base de datos / storage</li>
+	  </ul>
+	</section>
+	<section>
+	  <h1>Web (compleja)</h1>
+	  <ul>
+	    <li>Balanceadores</li>
+	    <li>n web server / proxy / cache</li>
+	    <li>n web apps</li>
+	    <li>n base de datos</li>
+	    <li>cache distribuido</li>
+	    <li>Assets / CDN</li>
+	    <li>Job queue</li>
+	    <li>n mobile apps</li>
+	  </ul>
+	</section>
+	<section>
+	  <h1>Proyecto web (simplificado)</h1>
+	  <ul>
+	    <li>n frontales</li>
+	    <li>Assets / CDN</li>
+	    <li>n http apps/apis</li>
+	    <li>n mobile apps</li>
+	    <li>n bases de datos</li>
+	    <li>1 cache distribuido</li>
+	    <li>1 Job queue (n workers)</li>
+	    <li>Automated deploy</li>
+	  </ul>
+	</section>
+	<section>
+	  <h1>Proyecto web con tráfico</h1>
+	  <ul>
+	    <li>n frontales</li>
+	    <li>Assets / CDN</li>
+	    <li>n http apps/apis</li>
+	    <li>n mobile apps</li>
+	    <li>n bases de datos</li>
+	    <li>1 cache distribuido</li>
+	    <li>1 Job queue (n workers)</li>
+	    <li>Automated deploy / Auto-escalado / ...</li>
+	  </ul>
+	</section>
+	<section>
+	  <h1>...</h1>
+	</section>
+	<section>
+	  <h2>Soysuper.com: 16 Máquinas / 200 VMs</h2>
+	  <img src="img/vms.png" alt="" class="plain">
+	</section>
+
+	<section>
+	  <h1>Arquitectura de nuestras apps</h1>
+	</section>
+
+	<section>
+	  <h1>Elección de lenguaje/s</h1>
+	  <h2>y componentes...</h2>
+	</section>
+
+	<section>
+	  <h1>SQL vs NoSQL</h1>
+	</section>
+
+	<section>
+	  <h1>Web monolítica</h1>
+	</section>
+
+	<section>
+	  <h1>MVC</h1>
+	  <h2>Fat models, thin controllers!</h2>
+	</section>
+
+	<section>
+	  <h1>Microservicios</h1>
+	  <h2>Dominios y contratos</h2>
+	</section>
+
+	<section>
+	  <h1>Wrap wrap wrap!</h1>
+	</section>
+
+	<section>
+	  <h1>Asincronía vs Multiproceso</h1>
+	</section>
+
+	<section>
+	  <h1>Job queues y mensajeria</h1>
+	  <h2>No hagas hoy lo que puedes hacer mañana</h2>
+	</section>
+
+	<section>
+	  <h1>Optimiza para el fallo</h1>
+	  <h2>Fail early and loud!</h2>
+	</section>
+
+	<section>
+	  <h1>Reliability</h1>
+	  <h2>de nuestro software</h2>
+	</section>
+
+	<section>
+	  <h1>Código desacoplado y testeable</h1>
+	  <h2>DRY</h2>
+	</section>
+
+	<section>
+	  <h1>Configuracion desacoplada</h1>
+	</section>
+
+	<section>
+	  <h1>Wrap wrap wrap!</h1>
+	</section>
+
+	<section>
+	  <h1>Código limpio</h1>
+	  <h2>Convenciones claras</h2>
+	</section>
+
+	<section>
+	  <h1>Git pre-commit hook</h1>
+	</section>
+
+	<section>
+	  <h1>Documentación</h1>
+	</section>
+
+	<section>
+	  <h1>Tests</h1>
+	  <h2>are code!</h2>
+	</section>
+
+	<section>
+	  <h1>-Ofun</h1>
+	  <br>
+	  <a>http://archive.oreilly.com/pub/post/ofun.html</a>
+	</section>
+
+	<section data-background="red">
+	  <h1>...</h1>
+	</section>
+
+	<section>
+	  <h1>Automatización</h1>
+	  <h2>y automatismos</h2>
+	</section>
+
+	<section>
+	  <h1>Testing</h1>
+	</section>
+
+	<section>
+	  <h1>Código testeable</h1>
+	  <h2>Prepare for testing!</h2>
+	</section>
+
+	<section>
+	  <h1>Tests unitarios</h1>
+	  <h2>"testing the smallest isolatable unit of an application"</h2>
+	</section>
+
+	<section>
+	  <h1>Feature testing &amp; TDD</h1>
+	  <h2>Auto-test</h2>
+	</section>
+
+	<section>
+	  <h1>Regression tests &amp; bug fixing</h1>
+	</section>
+
+	<section>
+	  <h1>Integration tests &amp; Mocking</h1>
+	</section>
+
+	<section>
+	  <h1>To test or not to test!?</h1>
+	</section>
+
+	<section>
+	  <h1>Build automatizado</h1>
+	</section>
+
+	<section>
+	  <h1>Integración continua</h1>
+	  <h2>Travis-ci / Jenkins</h2>
+	</section>
+
+	<section>
+	  <h1>Despliegue automatizado</h1>
+	</section>
+
+	<section>
+	  <h1>Despliegue automatizado</h1>
+	  <ul>
+	    <li>Crear instancia</li>
+	    <li>Instalar dependencias</li>
+	    <li>Instalar nuestro software</li>
+	    <li>Instalar configuraciones</li>
+	    <li>Testear instancia</li>
+	    <li>Añadir al balanceo</li>
+	    <li>Quitar instancia vieja</li>
+	  </ul>
+	</section>
+
+	<section>
+	  <h1>Bash / Capistrano / Chef / Ansible / Puppet</h1>
+	</section>
+
+	<section>
+	  <h1>Entornos</h1>
+	  <h2>Dev (vagrant)</h2>
+	  <h2>Staging / Pre / Pro</h2>
+	</section>
+
+
+	<section>
+	  <h1>CM</h1>
+	  <h2>Configuration manager</h2>
+	</section>
+
+	<section>
+	  <h1>Chatbot</h1>
+	  <h2>Glue them all!</h2>
+	</section>
+
+	<section data-background="red">
+	  <h1>...</h1>
+	</section>
+
+	<section>
+	  <h1>Técnicas</h1>
+	  <h1>y</h1>
+	  <h1>Metodologías</h1>
+	</section>
+
+	<section>
+	  <h1>Organización del código</h1>
+	</section>
+	<section>
+	  <h1>Control de versiones</h1>
+	</section>
+	<section>
+	  <h1>Git</h1>
+	</section>
+	<section>
+	  <h1>Feature toggle</h1>
+	</section>
+	<section>
+	  <h1>Release early, release often</h1>
+	</section>
+	<section>
+	  <h1>Integración continua</h1>
+	</section>
+	<section>
+	  <h1>Delivery continuo</h1>
+	  <img src="img/continuous_delivery.png" alt="" class="plain">
+	</section>
+	<section>
+	  <h1>Pull requests</h1>
+	</section>
+	<section>
+	  <h1>Revisiones de código</h1>
+	</section>
+	<section>
+	  <h1>Pair programming</h1>
+	</section>
+	<section>
+	  <h1>Guias de estilo</h1>
+	</section>
+	<section>
+	  <h1>Chaos monkey</h1>
+	</section>
+
+	<section data-background="red">
+	  <h1>...</h1>
+	</section>
+
+	<section>
+	  <h1>Refactoring</h1>
+	</section>
+	<section>
+	  <h1>Deuda tecnológica</h1>
+	</section>
+	<section>
+	  <h1>Tips &amp; tricks</h1>
+	</section>
+
+	<section>
+	<h1>...</h1>
+	</section>
+
+	<section data-background="red">
+	<h1>Gracias!</h1>
+	</section>
+
+	<section>
+	<h1>Preguntas?</h1>
+	</section>
+
+<section>
+<h2>Servidores dedicados</h2>
+<h3>Linux / VZ / KVM(1)</h3>
+<h3>Cada VM un rol</h3>
+<h3>Deploy automatizado</h3>
+<h3>Bot jabber!</h3>
+</section>
+
+<section>
+<h2>Código desacoplado</h2>
+<h3>Modelo ODM</h3>
+<h3>Modelo Search</h3>
+<h3>Plugins y Roles</h3>
+<h3>Libreria para cada problema</h3>
+</section>
+
+<section>
+<h2>7</h2>
+<h4>Apps</h4>
+<h2>283</h2>
+<h4>Librerias propias</h4>
+<h2>96</h2>
+<h4>Test files</h4>
+</section>
+
+<section>
+<h2>68335</h2>
+<h4>LOC Perl</h4>
+<h2>223150 / 34876</h2>
+<h4>LOC Javascript</h4>
+<h2>3559</h2>
+<h4>LOC Coffeescript</h4>
+</section>
+
+<section>
+<h2>Async++</h2>
+<h3>No hacer ahora lo que se puede hacer luego...</h3>
+</section>
+
+<section>
+      <h1>Resque++</h1>
+      <h3> 4 millones de eventos por día </h3>
+      <h3> 70 job classes + 27 roles</h3>
+      <h3> 130 workers </h3>
+      <h3> 66 colas </h3>
+</section>
+
+<section>
+<h1>Caos!</h1>
+<h3>El orden no está garantizado</h3>
+</section>
+
+<section>
+<h2>Roles/Traits/Mixins</h2>
+<h1>FTW!</h1>
+</section>
+
+<section>
+<p>In computer programming, a trait is a concept used in object-oriented programming: a trait represents a collection of methods, that can be used to extend the functionality of a class. Essentially a trait is similar to a class made only of concrete methods that is used to extend another class with a mechanism similar to multiple inheritance, but paying attention to name conflicts, hence with some support from the language for a name-conflict resolution policy to use when merging.</p>
+<p>Traits provide a "simple conceptual model for structuring object-oriented programs"[1][2] similar to mixins. Traits provide a simple way to create classes that reuse behavior from software components.</p>
+<p>Traits are somewhat between an interface and a mixin: an interface is made only of method signatures, while a trait includes also the full method definitions, on the other side mixins include method definitions, but they can also carry state through attributes while traits usually don't.</p>
+</section>
+
+<section>
+<h1>yada yada...</h1>
+</section>
+
+
+
+				<section>
+					<h2>Web App: Cache plugin</h2>
+          <h3>Redis LRU + Sereal</h3>
+          <h3>Async helper</h3>
+          <pre><code data-trim class="perl">
+my $value = $self->cached( cache_key => sub{ ... expensive op ... });
+my $value = $self->cached( other_key => sub{ ... }, '2h');
+my $value = $self->cached( other_key => sub{ ... }, '5m');
+my $value = $self->cached( other_key => sub{ ... }, '1d');
+          </code></pre>
+				</section>
+
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+	controls: false,
+	progress: false,
+	history: true,
+	center: true,
+
+	theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+	transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+	// Parallax scrolling
+	// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+	// parallaxBackgroundSize: '2100px 900px',
+
+	// Optional libraries used to extend on reveal.js
+	dependencies: [
+		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+	]
+      });
+    </script>
+  </body>
+</html>
