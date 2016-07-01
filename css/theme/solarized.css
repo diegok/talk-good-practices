@@ -151,3 +151,7 @@ body {
   box-shadow: none;
 }
 
+.reveal section blockquote {
+  width: 90%;
+  background:#fff;
+}
