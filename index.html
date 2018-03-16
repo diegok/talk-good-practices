@@ -30,6 +30,22 @@
     <div class="reveal">
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
+
+	<section>
+	  <h2>TODO</h2>
+	  <br><br>
+    <ul>
+      <li>Reorganizar para meter practica</li>
+      <li>Two pizza rule (bezos)</li>
+      <li>(n*(n-1))/2 communication</li>
+      <li>Microservicios</li>
+      <li>Logs flow en micro...</li>
+      <li>queue as a micro...</li>
+      <li>Devops añadir service-ownership (vogels)</li>
+
+    </ul>
+	</section>
+
 	<section>
 	  <h2>Buenas practicas en desarrollo</h2>
 	  <br><br>
@@ -66,13 +82,13 @@
 	  <h1>&lt;Me&gt;</h1>
 	</section>
 	<section>
-	  <h1>Pegado a los ordenadores hace 33 años</h1>
+	  <h1>Pegado a los ordenadores hace 34 años</h1>
 	</section>
 	<section>
 	  <h1>Logo</h1>
 	</section>
-	<section>
-	  <h1>Basic de comodore 64</h1>
+	<section data-background="#3e32a2">
+	  <h1 style="color:#7c71da;">Basic de comodore 64</h1>
 	</section>
 	<section>
 	  <h1>BBS's / Fidonet</h1>
@@ -128,7 +144,7 @@
 	  <h1>Hacer lo que hace Unix</h1>
 	</section>
 	<section>
-	  <img src="img/sex-drugs-unix.jpg" alt="" class="plain">
+	  <h1>Dividir y conquistar</h1>
 	</section>
 	<section>
 	  <h1>Crear es mas facil que cambiar</h1>
@@ -172,6 +188,9 @@
 	<section>
 	  <h1>Metodologías</h1>
 	</section>
+	<section>
+	  <h1>Comunicacion y equipos</h1>
+	</section>
 
 	<section>
 	  <h1>...</h1>
@@ -208,7 +227,7 @@
 	<section>
 	  <h1>Web simple con tráfico</h1>
 	  <ul>
-	    <li>1 web server / proxy / cache</li>
+	    <li>1/2 web server / proxy / cache</li>
 	    <li>n web apps</li>
 	    <li>1 base de datos / storage</li>
 	  </ul>
@@ -256,8 +275,49 @@
 	  <h1>...</h1>
 	</section>
 	<section>
-	  <h2>Soysuper.com: 16 Máquinas / 200 VMs</h2>
+	  <h2>Soysuper.com: 25 Máquinas / 200 VMs</h2>
 	  <img src="img/vms.png" alt="" class="plain">
+	</section>
+
+	<section>
+    <h1>10 M eventos</h1>
+    <h3>273 workers</h3>
+    <h2>138 colas</h2>
+    <h2>2 redis</h2>
+	</section>
+	<section>
+	  <h1>1.5 M imagenes originales</h1>
+	  <h2>7 M thumbs</h2>
+    <h3>15 Nodos</h3>
+	</section>
+	<section>
+	  <h1>577 m productos unicos</h1>
+	  <h2>857 m productos origen</h2>
+    <h3>3 + 3 Nodos</h3>
+	</section>
+	<section>
+	  <h1>58 M relaciones</h1>
+    <h3>11 Nodos</h3>
+	</section>
+	<section>
+	  <h1>39.6 M historicos</h1>
+	  <h2>180 M precios</h2>
+    <h3>3 / 3 Nodos</h3>
+	</section>
+	<section>
+	  <h1>39.6 M historicos</h1>
+	  <h2>180 M segmentos</h2>
+    <h3>3 / 3 Nodos</h3>
+	</section>
+	<section>
+	  <h1>4 TB indexed logs</h1>
+    <h3>12 Nodos</h3>
+	</section>
+	<section>
+	  <h1>...</h1>
+	</section>
+	<section>
+	  <h1>4 P</h1>
 	</section>
 
 	<section>
@@ -290,6 +350,13 @@
 	<section>
 	  <h1>Microservicios</h1>
 	  <h2>Dominios y contratos</h2>
+	</section>
+
+	<section>
+	  <img src="img/service-poo.jpg" alt="" class="plain">
+	</section>
+	<section>
+	  <img src="img/mud.jpg" alt="" class="plain">
 	</section>
 
 	<section>
@@ -340,6 +407,11 @@
 	  <a>http://archive.oreilly.com/pub/post/ofun.html</a>
 	</section>
 
+	<section>
+	  <h1>-Ofun</h1>
+    <h2>Para los devs</h2>
+	</section>
+
 	<section data-background="red">
 	  <h1>...</h1>
 	</section>
@@ -385,7 +457,7 @@
 	</section>
 	<section>
 	  <h1>Interfáz para nuestro repo</h1>
-	  <h2>Github / GitLab / Googs / Jira / Phabricator</h2>
+	  <h2>Github / GitLab / Googs / Jira / Phabricator / ...</h2>
 	</section>
 	<section>
 	  <h1>Interfáz para nuestro repo</h1>
@@ -413,11 +485,19 @@
 	  <h1>Cada commit es un solo proposito</h1>
 	  <h2>Idealmente vinculado a un issue/ticket</h2>
 	</section>
+	<section>
+	  <h1>La historia importa</h1>
+	</section>
 
 	<section>
 	  <h1>Squash it!</h1>
 	  <br><br>
 	  <pre><code>git rebase -i HEAD~4</code></pre>
+	</section>
+	<section>
+	  <h1>Squash it!</h1>
+	  <br><br>
+	  <pre><code>git merge --squash feature-branch</code></pre>
 	</section>
 
 	<section>
@@ -441,6 +521,12 @@
 	  <h2>En cada componente</h2>
 	  <br>
 	  <h3>Composer / package.json / bundler / ...</h3>
+	</section>
+	<section>
+	  <h1>Definir bien las dependencias</h1>
+	  <h2>En cada componente</h2>
+	  <br>
+	  <h3>Docker</h3>
 	</section>
 
 	<section>
@@ -601,14 +687,33 @@
 	<section>
 	  <h1>Devs ♥ Ops</h1>
 	</section>
+	<section>
+	  <blockquote>
+      Each service has a team associated with it, and that team is completely responsible for the service—from scoping out the functionality, to architecting it, to building it, and operating it.
+
+  -- Werner Vogels (2007)
+	  </blockquote>
+    <br><br>
+    <a href="https://queue.acm.org/detail.cfm?id=1142065">https://queue.acm.org/detail.cfm?id=1142065</a>
+	</section>
+	<section>
+	  <blockquote>
+  Giving developers operational responsibilities has greatly enhanced the quality of the services, both from a customer and a technology point of view.
+
+  -- Werner Vogels (2007)
+	  </blockquote>
+    <br><br>
+    <a href="https://queue.acm.org/detail.cfm?id=1142065">https://queue.acm.org/detail.cfm?id=1142065</a>
+	</section>
 
 	<section>
-	  <h1>PAAS</h1>
+	  <h1>PaaS</h1>
 	  <h2>Platform as a service</h2>
 	</section>
 	<section>
 	  <h2>Datacenter as a service</h2>
-	  <h3>AWS / Azure / DO / OpenStack / Virtualización</h3>
+	  <h3>AWS / Azure / GCP / DO / OpenStack</h3>
+	  <h3>Virtualización / Docker / K8s</h3>
 	</section>
 
 	<section>
@@ -638,7 +743,7 @@
 
 	<section>
 	  <h1>Entornos reproducibles</h1>
-	  <h2>Dev (vagrant)</h2>
+	  <h2>Dev: docker / vagrant</h2>
 	  <h2>Staging / Pre / Pro</h2>
 	</section>
 
@@ -674,7 +779,12 @@
 
 	<section>
 	  <h1>Logs centralizados</h1>
-	  <h2>LogStash / Papertrail / Splunk / New Relic</h2>
+	  <h2>Rsyslog / LogStash + Beats / Papertrail </h2>
+	</section>
+
+	<section>
+	  <h1>Distributed tracing</h1>
+	  <h2>Request-id / Zipkin</h2>
 	</section>
 
 	<section>
@@ -684,7 +794,7 @@
 
 	<section>
 	  <h1>Monitorización</h1>
-	  <h2>Nagios / Pingdom</h2>
+	  <h2>Nagios / Sensu / Grafana / Pingdom</h2>
 	</section>
 
 	<section>
@@ -701,10 +811,10 @@
           <pre><code data-trim class="yaml">
 language: perl
 perl:
+  - "5.26"
   - "5.24"
   - "5.22"
   - "5.20"
-  - "5.18"
 services:
   - redis-server
 before_install:
@@ -729,12 +839,12 @@ script: "dzil test --release"
 	</section>
 
 	<section>
-	  <h2>Docker / Kubernetes / CoreOS / AWS</h2>
+	  <h2>Docker / Kubernetes / Consul / CoreOS / AWS</h2>
 	</section>
 
 	<section>
 	  <h1>Service discovery</h1>
-	  <h2>Doozerd / Zookeeper / etcd</h2>
+	  <h2>etcd / Zookeeper / Consul / k8s</h2>
 	</section>
 
 	<section>
@@ -824,6 +934,39 @@ script: "dzil test --release"
 
 	<section data-background="red">
 	  <h1>...</h1>
+	</section>
+
+	<section>
+	  <h1>Comunicación</h1>
+	  <h1>y</h1>
+	  <h1>Equipos</h1>
+	</section>
+
+	<section>
+	  <img src="img/mythical.jpg" alt="" class="plain">
+	</section>
+
+	<section>
+	  <h1>Poca gente</h1>
+	  <h1>=</h1>
+	  <h1>Poca comunicación</h1>
+	</section>
+
+	<section>
+	  <img src="img/links.png" alt="" class="plain">
+	</section>
+
+	<section>
+	  <img src="img/hackman-graph.png" alt="" class="plain">
+	</section>
+
+	<section>
+    <h1>Two pizza teams</h1>
+    <p>(Jeff Bezos)</p>
+	</section>
+
+	<section>
+    <h1>Onboarding</h1>
 	</section>
 
 	<section data-background="red">
